@@ -13,6 +13,7 @@ import Booking from './pages/Booking';
 import CafeLogin from './pages/CafeLogin';
 import CafeDashboard from './pages/CafeDashboard';
 import Admin from './pages/Admin';
+import { InstallAppFloating } from './components/InstallAppButton';
 import 'leaflet/dist/leaflet.css';
 
 function ScrollToTop() {
@@ -41,6 +42,7 @@ export default function App() {
       </Routes>
       <Footer />
       <BottomNav />
+      <InstallAppFloating />
     </BrowserRouter>
   );
 }

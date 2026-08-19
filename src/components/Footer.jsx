@@ -12,7 +12,7 @@ export default function Footer() {
         <div style={{ gridColumn: 'span 2', minWidth: 260 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
             <span style={{ width: 38, height: 38, borderRadius: 12, background: '#0b0714', display: 'grid', placeItems: 'center' }}>
-              <img src="/logo.svg" alt="Experience Rishikesh" width="26" height="26" />
+              <img src="/logo.jpeg" alt="Experience Rishikesh" width="26" height="26" />
             </span>
             <div>
               <div className="serif" style={{ fontSize: '1.1rem', color: '#fff' }}>Experience Rishikesh</div>

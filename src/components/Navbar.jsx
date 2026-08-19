@@ -44,7 +44,7 @@ export default function Navbar() {
               display: 'grid', placeItems: 'center',
               boxShadow: '0 4px 14px rgba(124,58,237,.35)',
             }}>
-              <img src="/logo.svg" alt="Experience Rishikesh" width="26" height="26" style={{ display: 'block' }} />
+              <img src="/logo.jpeg" alt="Experience Rishikesh" width="26" height="26" style={{ display: 'block' }} />
             </span>
             <div style={{ minWidth: 0 }}>
               <div className="serif" style={{

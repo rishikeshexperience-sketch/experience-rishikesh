@@ -1,6 +1,6 @@
 /* Basic offline-friendly SW — cache the app shell, network-first for everything else. */
-const VERSION = 'er-v1';
-const APP_SHELL = ['/', '/manifest.webmanifest', '/icon-192.svg', '/icon-512.svg'];
+const VERSION = 'er-v2';
+const APP_SHELL = ['/', '/manifest.webmanifest', '/logo.jpeg'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(VERSION).then((c) => c.addAll(APP_SHELL).catch(() => {})));

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0714"/>
+      <stop offset=".5" stop-color="#1a0f2e"/>
+      <stop offset="1" stop-color="#0b0714"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".2" cy=".5" r=".7">
+      <stop offset="0" stop-color="rgba(124,58,237,.35)"/>
+      <stop offset="1" stop-color="rgba(124,58,237,0)"/>
+    </radialGradient>
+    <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c084fc"/>
+      <stop offset=".5" stop-color="#8b3ff5"/>
+      <stop offset="1" stop-color="#3b1477"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f5a623"/>
+      <stop offset="1" stop-color="#e8890a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- logo -->
+  <image href="/logo.jpeg" x="90" y="200" width="260" height="260" preserveAspectRatio="xMidYMid meet"/>
+
+  <!-- LIVE pill -->
+  <g transform="translate(400,220)">
+    <rect x="0" y="0" width="140" height="42" rx="21" fill="rgba(255,88,88,.16)" stroke="rgba(255,88,88,.5)"/>
+    <circle cx="22" cy="21" r="6" fill="#ff5b5b"/>
+    <text x="40" y="28" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="16" font-weight="800" fill="#ff8f8f" letter-spacing="2">LIVE</text>
+    <text x="40" y="52" font-family="system-ui,sans-serif" font-size="12" fill="rgba(255,255,255,.7)">TAPOVAN · RISHIKESH</text>
+  </g>
+
+  <!-- title -->
+  <text x="400" y="330" font-family="Georgia,'Playfair Display',serif" font-weight="900" font-size="72" fill="#fff">Experience</text>
+  <text x="400" y="410" font-family="Georgia,'Playfair Display',serif" font-weight="900" font-style="italic" font-size="72" fill="url(#orange)">Rishikesh.</text>
+
+  <!-- subtitle -->
+  <text x="400" y="465" font-family="system-ui,-apple-system,sans-serif" font-size="24" fill="rgba(255,255,255,.75)">A live storefront for Tapovan · 17 experiences</text>
+  <text x="400" y="500" font-family="system-ui,-apple-system,sans-serif" font-size="24" fill="rgba(255,255,255,.75)">One-tap WhatsApp booking · Real-time mood map</text>
+
+  <!-- footer chips -->
+  <g transform="translate(400,540)" font-family="system-ui,sans-serif" font-size="16" font-weight="800">
+    <g>
+      <rect x="0" y="0" width="120" height="40" rx="20" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.15)"/>
+      <text x="60" y="26" text-anchor="middle" fill="#fff">🧘 Yoga</text>
+    </g>
+    <g transform="translate(132,0)">
+      <rect x="0" y="0" width="150" height="40" rx="20" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.15)"/>
+      <text x="75" y="26" text-anchor="middle" fill="#fff">🏄 Adventure</text>
+    </g>
+    <g transform="translate(294,0)">
+      <rect x="0" y="0" width="140" height="40" rx="20" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.15)"/>
+      <text x="70" y="26" text-anchor="middle" fill="#fff">🕉 Spiritual</text>
+    </g>
+    <g transform="translate(446,0)">
+      <rect x="0" y="0" width="140" height="40" rx="20" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.15)"/>
+      <text x="70" y="26" text-anchor="middle" fill="#fff">☕ Cafes</text>
+    </g>
+  </g>
+</svg>
