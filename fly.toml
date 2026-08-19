@@ -1,0 +1,43 @@
+# Fly.io single-service deploy — always-on free tier (3 shared-cpu-1x + 3 GB volume).
+# Setup:
+#   1. curl -L https://fly.io/install.sh | sh
+#   2. fly auth signup
+#   3. fly launch --no-deploy         (creates the app; keep the fly.toml it generates OR use this one)
+#   4. fly volumes create er_data --size 1 --region bom
+#   5. fly secrets set ADMIN_PASSWORD='your-strong-secret'
+#   6. fly deploy
+
+app = "experience-rishikesh"
+primary_region = "bom"                 # Mumbai — closest to Rishikesh
+kill_signal = "SIGINT"
+kill_timeout = "5s"
+
+[build]
+  # Uses the auto-generated Dockerfile from `fly launch`, or Nixpacks. Both detect Node.
+  # Ensure your build step runs `npm run build` before `npm start`.
+
+[env]
+  PORT = "8080"
+  PERSIST_DIR = "/data"
+
+[mounts]
+  source = "er_data"
+  destination = "/data"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"          # allow auto-stop for free-tier savings; wake is ~1s
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [[http_service.checks]]
+    interval = "30s"
+    timeout = "5s"
+    grace_period = "10s"
+    method = "get"
+    path = "/api/health"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "256mb"

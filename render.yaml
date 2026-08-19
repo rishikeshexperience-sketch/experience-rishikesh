@@ -1,0 +1,26 @@
+# Single-service deploy on Render: Express serves both the API and the built
+# React frontend. One URL, one dashboard, one deploy.
+#
+# On render.com → "New +" → "Blueprint" → point at this repo.
+
+services:
+  - type: web
+    name: experience-rishikesh
+    runtime: node
+    plan: free                       # bump to 'starter' when you want no cold-starts
+    region: singapore                # closest to Rishikesh users
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: ADMIN_PASSWORD
+        sync: false                  # set this in the Render dashboard, not in git
+      - key: PERSIST_DIR
+        value: /opt/render/project/src/persist
+    disk:
+      name: data
+      mountPath: /opt/render/project/src/persist
+      sizeGB: 1                      # free tier includes 1 GB

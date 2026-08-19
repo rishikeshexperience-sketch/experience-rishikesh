@@ -1,0 +1,17 @@
+{
+  "name": "Experience Rishikesh",
+  "short_name": "Rishikesh",
+  "description": "Live Tapovan mood map and curated experiences — yoga, adventure, spiritual, cultural, travel. One-tap WhatsApp booking.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b0714",
+  "theme_color": "#7c3aed",
+  "categories": ["travel", "lifestyle", "shopping"],
+  "icons": [
+    { "src": "/icon-192.svg", "sizes": "192x192", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icon-512.svg", "sizes": "512x512", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
